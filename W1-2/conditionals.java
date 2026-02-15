@@ -86,6 +86,75 @@ public class conditionals {
         else {
             System.out.println("Failed");
         }
-        
+
+
+        System.out.println("Enter a number between 1 - 7");
+        int n = in.nextInt();
+
+        // cases
+        switch(n) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Webnesday");
+                break;
+            case 5:
+                System.out.println("Thursday");
+                break;
+            case 6:
+                System.out.println("Friday");
+                break;
+            case 7:
+                System.out.println("Saturday");
+                break;
+            default :
+                System.out.println("Invalid choice");
+        }
+
+        System.out.println("Calculator");
+
+        System.out.println("Enter a character");
+        char ch = in.next().charAt(0);
+
+        System.out.println("ENter 2 integers");
+        int num1 = in.nextInt();
+        int b = in.nextInt();
+
+        switch(ch) {
+            case '+':
+                System.out.println(num1 + b);
+                break;
+            case '-':
+                System.out.println(num1 - b);
+                break;
+            case '*':
+                System.out.println(num1 * b);
+                break;
+            case '/':
+                if(b == 0) {
+                    System.out.println("b cant be 0");
+                    break;
+                }
+                System.out.println(num1 / b);
+                break;
+            case '%':
+                if(b == 0) {
+                    System.out.println("b cant be 0");
+                    break;
+                }
+                System.out.println(num1 % b);
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        System.out.println("At the END");
     }
 }
