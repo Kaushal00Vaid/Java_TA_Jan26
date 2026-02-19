@@ -10,17 +10,19 @@ class Student {
     // copy constructor
     Student(Student st) {
         name = st.name;
-        // marks = st.marks; // SHALLOW COPY
-        marks = new double[st.marks.length]; // MAKING SURE I CREATE A NEW MEMORY STORAGE for this marks --> DEEP COPY
+        // marks = st.marks; // SHALLOW COPy
 
-        // COPYING FROM ONE OBJECT TO OTHER
-        int idx = 0;
+        // solution --> create new storage
+        marks = new double[st.marks.length];
+
+        int idx=0;
         for(double i : st.marks) {
-            marks[idx++] = i;
+            marks[idx] = i;
+            idx++;
         }
 
         for(int i = 0; i < st.marks.length; i++) {
-            marks[i] = marks[i];
+            marks[i] = st.marks[i];
         }
     }
 }
@@ -37,10 +39,10 @@ public class ShallowDeepCopy {
 
     public static void main(String[] args) {
         double[] marks = new double[]{4.5, 3.5, 2.5, 3.5};
+
         Student st1 = new Student("Kaushal", marks);
         Student st2 = new Student(st1);
 
-        st2.name = "Random Name";
         st2.marks[2] = 45;
 
         System.out.println("Student 1 details");
