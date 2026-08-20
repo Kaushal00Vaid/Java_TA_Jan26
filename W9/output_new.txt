@@ -1,0 +1,3 @@
+I am writing to this file
+Hello from FileOutputStream
+Again Hi

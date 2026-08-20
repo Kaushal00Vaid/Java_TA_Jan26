@@ -1,0 +1,2 @@
+Hi there, from input_new.txt
+Hello world
