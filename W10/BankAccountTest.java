@@ -7,6 +7,7 @@ class BankAccount {
 
     // deposit()
     public synchronized void deposit(int amount) {
+
         balance += amount;
         transactionCount++;
 

@@ -33,7 +33,7 @@ public class RaceConditionTest {
             System.out.println("Some exception occured");
         }
 
-        // excepted --> 20k
+        // excepted --> 10k + 10k = 20k
         System.out.println("Final value of counter: " + counter);
     }
 }
